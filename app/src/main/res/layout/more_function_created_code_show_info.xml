@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:background="@drawable/shape_rounded_corners"
+    android:backgroundTint="@color/white"
+    android:paddingVertical="@dimen/_8sdp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingVertical="@dimen/_4sdp"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+
+            android:padding="@dimen/_2sdp"
+             android:tint="?attr/greenAppColor"
+            android:src="@drawable/ic_note"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            android:text="@string/note"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingVertical="@dimen/_4sdp"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:padding="@dimen/_2sdp"
+             android:tint="?attr/greenAppColor"
+            android:src="@drawable/ic_copy"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            android:text="@string/copy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_4sdp"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/collectIcon"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+
+            android:padding="@dimen/_2sdp"
+             android:tint="?attr/greenAppColor"
+            android:src="@drawable/ic_fav"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/collectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            android:text="@string/collect"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_4sdp"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+
+            android:padding="@dimen/_5sdp"
+             android:tint="?attr/greenAppColor"
+            android:src="@drawable/ic_share"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            android:text="@string/share"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

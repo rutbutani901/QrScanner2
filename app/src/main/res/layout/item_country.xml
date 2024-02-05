@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/gradient_green_rounded_corners_8sdp"
+    android:backgroundTint="@color/white"
+
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingTop="@dimen/_13sdp"
+    >
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:scaleType="centerCrop"
+
+        app:layout_constraintDimensionRatio="16:9"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.15"
+        app:shapeAppearanceOverlay="@style/shapeableImgeViewStyle5sdp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/countryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_regular"
+        android:text="America"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flag"
+        app:layout_constraintTop_toTopOf="@id/flag"
+        app:layout_constraintBottom_toBottomOf="@id/flag"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tick"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+
+        android:src="@drawable/ic_theme_tick_icon"
+        android:tint="?attr/greenAppColor"
+
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+
+        app:dividerColor="@color/veryLightGrey"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier5"
+        />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="flag,countryName,tick"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.fragments.ScanFragment"
+    android:background="@color/lightWhiteMainBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_3sdp"
+
+
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_6sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/flash"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_flash"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/help"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/help"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_question_mark"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flash"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/shape_like_us_bg"
+
+            android:paddingHorizontal="@dimen/_5sdp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/thumb"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+
+                app:lottie_rawRes="@raw/like"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/likeUs"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/blankWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:elevation="@dimen/_3sdp"
+
+        android:minHeight="@dimen/_35sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+
+        >
+        <FrameLayout
+            android:id="@+id/bannerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/grantCameraPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        android:elevation="@dimen/_1sdp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cameraLogo"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+
+            android:src="@drawable/ic_camera_big"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/grant_camera_permission"
+            android:textAlignment="center"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cameraLogo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/please_grant_permission_in_the_settings_permissions_camera_options_of_your_phone"
+            android:textAlignment="center"
+
+            android:textColor="@color/greyTextColorAppIntro"
+            android:textSize="@dimen/_12ssp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/openSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:background="@drawable/gradient_green"
+
+
+            android:fontFamily="@font/roboto_medium"
+            android:paddingHorizontal="@dimen/_25sdp"
+
+
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/open_settings"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/openGallery"
+
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+
+            android:layout_marginHorizontal="@dimen/_8sdp"
+
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/gradient_green_rounded_corners_8sdp"
+            android:backgroundTint="@color/lightGreyColor"
+            android:padding="@dimen/_5sdp"
+
+            android:src="@drawable/ic_gallery"
+
+
+            app:layout_constraintEnd_toStartOf="@id/scanCode"
+
+
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/openSetting" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/scanCode"
+
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/gradient_green_rounded_corners_8sdp"
+            android:backgroundTint="@color/lightGreyColor"
+
+            android:padding="@dimen/_5sdp"
+
+            android:src="@drawable/ic_scan_barcode"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/openGallery"
+            app:layout_constraintTop_toBottomOf="@id/openSetting" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainScanLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="visible"
+        >
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/keepFoucLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:elevation="@dimen/_3sdp"
+            android:background="@drawable/shape_rounded_corners"
+
+            android:backgroundTint="@color/keepFocusLightBlack"
+            android:paddingVertical="@dimen/_4sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            app:layout_constraintBottom_toTopOf="@id/img_qr_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+
+                android:layout_marginHorizontal="@dimen/_5sdp"
+
+                android:src="@drawable/ic_bell"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/keepFocusOnCode"
+                android:textColor="@color/white"
+
+
+                android:textSize="@dimen/_11ssp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <View
+            android:id="@+id/img_qr_box"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:elevation="5dp"
+
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.5"
+
+            android:background="@drawable/barcode_scanner_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/scanningAnimation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:elevation="4dp"
+            android:visibility="visible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.5"
+
+            android:paddingHorizontal="@dimen/_5sdp"
+
+            app:lottie_rawRes="@raw/animation_lnbdlz5w"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:id="@+id/shadow_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toTopOf="@+id/img_qr_box"
+            app:layout_constraintEnd_toStartOf="@+id/shadow_right"
+            app:layout_constraintStart_toEndOf="@+id/shadow_left"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <View
+            android:id="@+id/shadow_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shadow_right"
+            app:layout_constraintStart_toEndOf="@+id/shadow_left"
+            app:layout_constraintTop_toBottomOf="@+id/img_qr_box"
+            tools:visibility="invisible" />
+
+        <View
+            android:id="@+id/shadow_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_qr_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <View
+            android:id="@+id/shadow_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/previewView"
+            app:layout_constraintStart_toEndOf="@+id/img_qr_box"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gift"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@id/seekBarHolder"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+
+                app:lottie_rawRes="@raw/gift_box"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/giftTag"
+
+
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/giftTag"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+
+
+                android:src="@drawable/ic_gift_text"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+             />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/seekBarHolder"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:layout_marginTop="@dimen/_35sdp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_qr_box"
+
+            app:layout_constraintWidth_percent="0.6">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/zoomOutIcon"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:max="40"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:progress="0"
+
+
+                android:progressBackgroundTint="@color/white"
+
+                android:progressTint="?attr/greenAppColor"
+                android:thumbTint="?attr/greenAppColor"
+
+                app:layout_constraintBottom_toBottomOf="@id/zoomInIcon"
+                app:layout_constraintEnd_toStartOf="@id/zoomInIcon"
+                app:layout_constraintStart_toEndOf="@id/zoomOutIcon"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/zoomInIcon"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/manualScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/viewResult"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/roboto_medium"
+
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_8sdp"
+
+            android:background="@drawable/gradient_green_rounded_corners_8sdp"
+
+
+            app:layout_constraintTop_toBottomOf="@id/seekBarHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tabs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.9"
+
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/manualScan"
+
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/scanImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:paddingVertical="@dimen/_10sdp"
+                android:focusable="true"
+                android:orientation="vertical"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+
+                    android:background="@drawable/gradient_green_rounded_corners_8sdp"
+                    android:backgroundTint="?attr/greenAppColor"
+
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_gallery"
+
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+                    android:text="@string/scan_image"
+
+                    android:textAlignment="center"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/barcode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+
+                android:paddingVertical="@dimen/_10sdp"
+                android:focusable="true"
+                android:orientation="vertical"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+
+                    android:background="@drawable/gradient_green_rounded_corners_8sdp"
+                    android:backgroundTint="?attr/greenAppColor"
+
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_scan_barcode"
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/scanImageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+
+
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+                    android:text="@string/barcode"
+
+                    android:textAlignment="center"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+
+                    />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/batchScan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+
+                android:focusable="true"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_10sdp"
+
+                android:background="@drawable/shape_rounded_corners"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+android:id="@+id/batchScanLogo"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+
+                    android:background="@drawable/gradient_green_rounded_corners_8sdp"
+                    android:backgroundTint="?attr/greenAppColor"
+
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_batch_scan"
+app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/batchScanProIcon"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/ic_pro"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@id/batchScanLogo"
+                    app:layout_constraintEnd_toEndOf="@id/batchScanLogo"
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/helpText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+                    android:text="@string/batchScan"
+
+                    android:textAlignment="center"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintTop_toBottomOf="@id/batchScanLogo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

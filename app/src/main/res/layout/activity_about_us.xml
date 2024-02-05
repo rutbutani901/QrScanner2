@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.ViewCodeActivity"
+    android:background="@color/lightWhiteMainBackground">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8sdp"
+
+        android:background="@drawable/only_gradient_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+
+            android:padding="@dimen/_3sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="@dimen/_2sdp"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/_8sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/aboutUsNew"
+
+
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/topCurversBg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:background="@drawable/shape_botom_curves"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:visibility="visible"
+        android:paddingBottom="@dimen/_7sdp"
+
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topCurversBg"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/shape_rounded_corners"
+            android:backgroundTint="@color/white"
+            >
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:backgroundTint="@color/white"
+
+
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/barcodeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:padding="@dimen/_20sdp"
+
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:elevation="@dimen/_5sdp"
+                    />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/qrImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+
+
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/scanToDownload"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/cardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="horizontal"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/text">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/save"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:background="@drawable/shape_storke_main_color"
+
+                    android:layout_marginEnd="@dimen/_5sdp"
+
+                    android:text="@string/saveQr"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="?attr/greenAppColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/share"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:background="@drawable/gradient_green_rounded_corners_8sdp"
+                    android:text="@string/share"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/printPageFormat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="@dimen/_12sdp"
+
+        android:visibility="gone"
+
+
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ad_Linear_Layout"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/printTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/printPageLayout"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/pageCardView"
+
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pageCardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:backgroundTint="#FFFFFF"
+
+            app:cardElevation="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/printTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/printLayoutButton"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/printCodeType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Print Page Layout"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="#FF000000"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/roboto_medium"
+
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/printImage"
+
+                    />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/printImage"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:elevation="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@id/printCodeType"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/printLayoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/gradient_green_rounded_corners_8sdp"
+
+            android:text="@string/print"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+
+
+
+            android:fontFamily="@font/roboto_medium"
+
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:id="@+id/ad_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+
+        <FrameLayout
+            android:id="@+id/adContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

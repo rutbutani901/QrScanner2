@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_selected="false">
+    <shape >
+
+        <corners android:radius="@dimen/_12sdp" />
+        <solid android:color="@color/notes_dialog_bg"
+            />
+
+    </shape>
+</item>
+    <item android:state_selected="true">
+        <shape >
+
+            <corners android:radius="@dimen/_12sdp" />
+            <stroke android:color="?attr/greenAppColor"
+                android:width="@dimen/_1sdp"
+                />
+
+        </shape>
+    </item>
+
+</selector>

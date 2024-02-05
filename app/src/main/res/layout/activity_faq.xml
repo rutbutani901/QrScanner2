@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical"
+    android:background="@drawable/only_gradient_green"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:background="@drawable/only_gradient_green"
+
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+
+            android:layout_marginStart="@dimen/_2sdp"
+            android:padding="@dimen/_3sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"
+
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:text="@string/faq"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/_16ssp"
+
+
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:background="@drawable/shape_top_side_curves"
+        android:backgroundTint="@color/lightWhiteMainBackground"
+
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/shape_top_side_curves"
+            android:backgroundTint="@color/lightWhiteMainBackground"
+
+            android:orientation="vertical"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/white"
+
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+
+                >
+                <androidx.appcompat.widget.LinearLayoutCompat
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical"
+
+                        android:text="@string/why_isn_t_the_price_displayed"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/roboto_regular"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+
+                        android:padding="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_right_arrow"
+
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/firstDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_15sdp"
+
+                    app:dividerColor="@color/notes_dialog_bg"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/firstText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="gone"
+                    android:text="@string/after_the_app_recognizes_the_qr_code_successfully_we_will_search_for_the_product_on_the_mainstream_e_commerce_platform_as_soon_as_possible_however_there_may_be_circumstances_that_cannot_be_sold_beyond_our_control_please_understand"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/lightGreyColor"
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+
+                    android:layout_marginStart="@dimen/_15sdp"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/white"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+
+                >
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical"
+
+                        android:text="@string/haveProblemWithLink"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/roboto_regular"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+
+                        android:padding="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_right_arrow"
+
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/secondDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_15sdp"
+
+                    app:dividerColor="@color/notes_dialog_bg"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/secondText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="gone"
+                    android:text="@string/this_app_only_helps_you_to_read_links_urls_from_a_qr_code_it_is_isn_t_responsible_for_any_content_on_those_webpages_if_you_have_any_concerns_regarding_the_above_link_please_contact_the_owner_of_this_qr_code_for_more_information_thank_you"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/lightGreyColor"
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+
+                    android:layout_marginStart="@dimen/_15sdp"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/white"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+
+                >
+                <androidx.appcompat.widget.LinearLayoutCompat
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical"
+
+                        android:text="@string/why_can_t_connect_to_a_wifi_network_automatically"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/roboto_regular"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+
+                        android:padding="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_right_arrow"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/thirdDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_15sdp"
+
+                    app:dividerColor="@color/notes_dialog_bg"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/thirdText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="gone"
+                    android:text="@string/wifiAuto"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/lightGreyColor"
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+
+                    android:layout_marginStart="@dimen/_15sdp"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fourth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/white"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+
+                >
+                <androidx.appcompat.widget.LinearLayoutCompat
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical"
+
+                        android:text="@string/productInformationImme"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/roboto_regular"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+
+                        android:padding="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_right_arrow"
+
+
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/fourthDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_15sdp"
+
+                    app:dividerColor="@color/notes_dialog_bg"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fourthText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="gone"
+                    android:text="@string/there_are_billions_of_products_in_the_world_only_search_engines_can_find_such_information_please_click_quot_search_quot_and_use_if_effectively_thank_you"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/lightGreyColor"
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:layout_marginVertical="@dimen/_10sdp"
+
+                    android:layout_marginStart="@dimen/_15sdp"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

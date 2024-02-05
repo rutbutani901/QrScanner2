@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_4sdp"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+
+        android:src="@drawable/ic_webiste_icon"
+        android:layout_gravity="center"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/webiteText"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+
+        android:layout_gravity="center"
+        android:text="https://www.google.com"
+        android:textColor="?attr/websiteUrlColor"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/roboto_regular"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

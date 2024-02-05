@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="custom_red" format="color" />
+    <attr name="custom_blue" format="color" />
+    <attr name="custom_green" format="color" />
+
+
+    <attr name="black" format="color" />
+    <attr name="white" format="color" />
+    <attr name="whiteColorInAllThemes" format="color" />
+
+
+    <attr name="greenAppColor" format="color" />
+
+    <attr name="greenGradientStartColor" format="color" />
+    <attr name="greenGradientEndColor" format="color" />
+
+    <attr name="greyTextColorSplash" format="color" />
+
+    <attr name="greenAppColorLightAppIntro" format="color" />
+    <attr name="greyTextColorAppIntro" format="color" />
+
+    <attr name="languageHolderThemeColors" format="color" />
+    <attr name="unselectedLangOffRadioIconColor" format="color" />
+    <attr name="selectedLanguageBgLightThemeColor" format="color" />
+
+
+    <attr name="homeCameraPermissionDialogGreyColor" format="color" />
+    <attr name="homeCameraPermissionDialogNoColor" format="color" />
+    <attr name="homeCameraPermissionDialogNoStrokeColor" format="color" />
+    <attr name="orangeStartColor" format="color" />
+    <attr name="greenEndColor" format="color" />
+
+
+    <attr name="lightGreyColor" format="color" />
+
+    <attr name="lightWhiteMainBackground" format="color" />
+
+    <attr name="likeUsGreyBgColor" format="color" />
+
+    <!--    <attr name="nonScanableAreaColor" format="color" />-->
+    <!--    <attr name="nonScanableAreaColor" format="color" />-->
+    <attr name="nonScanableAreaColor" format="color" />
+    <attr name="keepFocusLightBlack" format="color" />
+
+    <attr name="noteUnselectedOkColor" format="color" />
+
+    <attr name="greyDividerColor" format="color" />
+    <attr name="notes_dialog_bg" format="color" />
+
+    <attr name="datePickerColor" format="color" />
+    <attr name="datePickerButtonsColor" format="color" />
+    <attr name="dimColor" format="color" />
+
+    <attr name="blueThemeColor" format="color" />
+    <attr name="purpleThemeColor" format="color" />
+    <attr name="yellowThemeColor" format="color" />
+    <attr name="pinkThemeColor" format="color" />
+    <attr name="websiteUrlColor" format="color" />
+
+</resources>

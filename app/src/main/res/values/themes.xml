@@ -1,0 +1,347 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QrScanner2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">?attr/greenAppColor</item>
+        <item name="colorPrimaryVariant">?attr/greenAppColor</item>
+        <item name="colorOnPrimary">?attr/greenAppColor</item>
+        <item name="colorSecondary">?attr/greenAppColor</item>
+        <item name="colorSecondaryVariant">?attr/greenAppColor</item>
+        <item name="colorOnSecondary">?attr/greenAppColor</item>
+        <item name="android:statusBarColor">@color/greenAppColor</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_top_side_curves</item>
+    </style>
+
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="shapeableImgeViewStyle" parent="">
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+    <style name="shapeableImgeViewStyle5sdp" parent="">
+        <item name="cornerSize">@dimen/_5sdp</item>
+    </style>
+
+
+
+    <style name="MyDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMinor">85%</item>
+        <item name="android:windowMinWidthMajor">85%</item>
+
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowMinWidthMajor">85%</item>
+        <item name="android:windowMinWidthMinor">85%</item>
+
+    </style>
+
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/greenAppColor</item>
+        <item name="colorPrimary">@color/greenAppColor</item>
+        <item name="colorPrimaryDark">@color/greenAppColor</item>
+        <item name="colorPrimaryVariant">@color/greenAppColor</item>
+        <item name="colorOnPrimary">@color/greenAppColor</item>
+        <item name="colorSecondary">@color/greenAppColor</item>
+
+    </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/datePickerColor</item>
+        <item name="android:buttonBarButtonStyle">@style/MyButtonBarButtonStyle</item>
+    </style>
+    <style name="MyButtonBarButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/datePickerButtonsColor</item>
+    </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+    </style>
+
+
+    <style name="GreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="black">#FF000000</item>
+        <item name="white">#FFFFFFFF</item>
+        <item name="whiteColorInAllThemes">#FFFFFFFF</item>
+
+
+        <item name="greenAppColor">#33CB8B</item>
+        <item name="greenGradientStartColor">#01b296</item>
+        <item name="greenGradientEndColor">#0cca84</item>
+        <item name="greyTextColorSplash">#959595</item>
+
+        <item name="greenAppColorLightAppIntro">#4A03B393</item>
+        <item name="greyTextColorAppIntro">#6A6A6A</item>
+        <item name="languageHolderThemeColors">#FFFFFFFF</item>
+        <item name="unselectedLangOffRadioIconColor">#8B8B8B</item>
+
+        <item name="selectedLanguageBgLightThemeColor">#2603B393</item>
+        <item name="homeCameraPermissionDialogGreyColor">#333333</item>
+        <item name="homeCameraPermissionDialogNoColor">#6A6A6A</item>
+        <item name="homeCameraPermissionDialogNoStrokeColor">#CFCFCF</item>
+        <item name="orangeStartColor">#E9B32D</item>
+
+        <item name="greenEndColor">#01990F</item>
+        <item name="lightGreyColor">#B1AFAF</item>
+        <item name="lightWhiteMainBackground">#F6F6F6</item>
+        <item name="likeUsGreyBgColor">#66BFBBBB</item>
+
+        <item name="nonScanableAreaColor">#99000000</item>
+        <item name="keepFocusLightBlack">#66000000</item>
+        <item name="noteUnselectedOkColor">#666A6A6A</item>
+        <item name="greyDividerColor">#D1CBCB</item>
+        <item name="notes_dialog_bg">#4DC9C9CA</item>
+
+        <item name="datePickerColor">#009688</item>
+        <item name="datePickerButtonsColor">#F0AF51</item>
+        <item name="dimColor">#80000000</item>
+
+        <item name="blueThemeColor">#0077F0</item>
+        <item name="purpleThemeColor">#7547DD</item>
+        <item name="yellowThemeColor">#FFBC17</item>
+        <item name="pinkThemeColor">#FF4985</item>
+
+        <item name="websiteUrlColor">#3F51B5</item>
+
+        <item name="android:statusBarColor">@color/greenAppColor</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="BlueTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <item name="black">#FF000000</item>
+        <item name="white">#FFFFFFFF</item>
+        <item name="whiteColorInAllThemes">#FFFFFFFF</item>
+
+        <item name="greenAppColor">#0077F0</item>
+        <item name="greenGradientStartColor">#0983ff</item>
+        <item name="greenGradientEndColor">#3498ff</item>
+        <item name="greyTextColorSplash">#959595</item>
+
+        <item name="greenAppColorLightAppIntro">#4A0077F0</item>
+        <item name="greyTextColorAppIntro">#6A6A6A</item>
+        <item name="languageHolderThemeColors">#FFFFFFFF</item>
+        <item name="unselectedLangOffRadioIconColor">#8B8B8B</item>
+
+        <item name="selectedLanguageBgLightThemeColor">#260077F0</item>
+        <item name="homeCameraPermissionDialogGreyColor">#333333</item>
+        <item name="homeCameraPermissionDialogNoColor">#6A6A6A</item>
+        <item name="homeCameraPermissionDialogNoStrokeColor">#CFCFCF</item>
+        <item name="orangeStartColor">#E9B32D</item>
+        <item name="greenEndColor">#01990F</item>
+        <item name="lightGreyColor">#B1AFAF</item>
+        <item name="lightWhiteMainBackground">#F6F6F6</item>
+        <item name="likeUsGreyBgColor">#66BFBBBB</item>
+        <!--    <item name="nonScanableAreaColor">#A8000000</item>-->
+        <!--    <item name="nonScanableAreaColor">#A89F9F9F</item>-->
+        <item name="nonScanableAreaColor">#99000000</item>
+        <item name="keepFocusLightBlack">#66000000</item>
+        <item name="noteUnselectedOkColor">#666A6A6A</item>
+        <item name="greyDividerColor">#D1CBCB</item>
+        <item name="notes_dialog_bg">#4DC9C9CA</item>
+        <item name="datePickerColor">#009688</item>
+        <item name="datePickerButtonsColor">#F0AF51</item>
+        <item name="dimColor">#80000000</item>
+        <item name="blueThemeColor">#0077F0</item>
+        <item name="purpleThemeColor">#7547DD</item>
+        <item name="yellowThemeColor">#FFBC17</item>
+        <item name="pinkThemeColor">#FF4985</item>
+
+        <item name="websiteUrlColor">#3F51B5</item>
+
+        <item name="android:statusBarColor">@color/blueThemeColor</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="PurpleTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <item name="black">#FF000000</item>
+        <item name="white">#FFFFFFFF</item>
+        <item name="whiteColorInAllThemes">#FFFFFFFF</item>
+
+        <item name="greenAppColor">#7547DD</item>
+        <item name="greenGradientStartColor">#7a4ce4</item>
+        <item name="greenGradientEndColor">#8150f3</item>
+        <item name="greyTextColorSplash">#959595</item>
+
+        <item name="greenAppColorLightAppIntro">#4A7547DD</item>
+        <item name="greyTextColorAppIntro">#6A6A6A</item>
+        <item name="languageHolderThemeColors">#FFFFFFFF</item>
+        <item name="unselectedLangOffRadioIconColor">#8B8B8B</item>
+
+        <item name="selectedLanguageBgLightThemeColor">#267547DD</item>
+        <item name="homeCameraPermissionDialogGreyColor">#333333</item>
+        <item name="homeCameraPermissionDialogNoColor">#6A6A6A</item>
+        <item name="homeCameraPermissionDialogNoStrokeColor">#CFCFCF</item>
+        <item name="orangeStartColor">#E9B32D</item>
+        <item name="greenEndColor">#01990F</item>
+        <item name="lightGreyColor">#B1AFAF</item>
+        <item name="lightWhiteMainBackground">#F6F6F6</item>
+        <item name="likeUsGreyBgColor">#66BFBBBB</item>
+        <!--    <item name="nonScanableAreaColor">#A8000000</item>-->
+        <!--    <item name="nonScanableAreaColor">#A89F9F9F</item>-->
+        <item name="nonScanableAreaColor">#99000000</item>
+        <item name="keepFocusLightBlack">#66000000</item>
+        <item name="noteUnselectedOkColor">#666A6A6A</item>
+        <item name="greyDividerColor">#D1CBCB</item>
+        <item name="notes_dialog_bg">#4DC9C9CA</item>
+        <item name="datePickerColor">#009688</item>
+        <item name="datePickerButtonsColor">#F0AF51</item>
+        <item name="dimColor">#80000000</item>
+        <item name="blueThemeColor">#0077F0</item>
+        <item name="purpleThemeColor">#7547DD</item>
+        <item name="yellowThemeColor">#FFBC17</item>
+        <item name="pinkThemeColor">#FF4985</item>
+
+        <item name="websiteUrlColor">#3F51B5</item>
+
+        <item name="android:statusBarColor">@color/purpleThemeColor</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="YellowTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <item name="black">#FF000000</item>
+        <item name="white">#FFFFFFFF</item>
+        <item name="whiteColorInAllThemes">#FFFFFFFF</item>
+
+        <item name="greenAppColor">#FFBC17</item>
+        <item name="greenGradientStartColor">#FEB502</item>
+        <item name="greenGradientEndColor">#feb802</item>
+        <item name="greyTextColorSplash">#959595</item>
+
+        <item name="greenAppColorLightAppIntro">#4AFFBC17</item>
+        <item name="greyTextColorAppIntro">#6A6A6A</item>
+        <item name="languageHolderThemeColors">#FFFFFFFF</item>
+        <item name="unselectedLangOffRadioIconColor">#8B8B8B</item>
+
+        <item name="selectedLanguageBgLightThemeColor">#26FFBC17</item>
+        <item name="homeCameraPermissionDialogGreyColor">#333333</item>
+        <item name="homeCameraPermissionDialogNoColor">#6A6A6A</item>
+        <item name="homeCameraPermissionDialogNoStrokeColor">#CFCFCF</item>
+        <item name="orangeStartColor">#E9B32D</item>
+        <item name="greenEndColor">#01990F</item>
+        <item name="lightGreyColor">#B1AFAF</item>
+        <item name="lightWhiteMainBackground">#F6F6F6</item>
+        <item name="likeUsGreyBgColor">#66BFBBBB</item>
+        <!--    <item name="nonScanableAreaColor">#A8000000</item>-->
+        <!--    <item name="nonScanableAreaColor">#A89F9F9F</item>-->
+        <item name="nonScanableAreaColor">#99000000</item>
+        <item name="keepFocusLightBlack">#66000000</item>
+        <item name="noteUnselectedOkColor">#666A6A6A</item>
+        <item name="greyDividerColor">#D1CBCB</item>
+        <item name="notes_dialog_bg">#4DC9C9CA</item>
+        <item name="datePickerColor">#009688</item>
+        <item name="datePickerButtonsColor">#F0AF51</item>
+        <item name="dimColor">#80000000</item>
+        <item name="blueThemeColor">#0077F0</item>
+        <item name="purpleThemeColor">#7547DD</item>
+        <item name="yellowThemeColor">#FFBC17</item>
+        <item name="pinkThemeColor">#FF4985</item>
+
+        <item name="websiteUrlColor">#3F51B5</item>
+
+        <item name="android:statusBarColor">@color/yellowThemeColor</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="PinkTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <item name="black">#FF000000</item>
+        <item name="white">#FFFFFFFF</item>
+        <item name="whiteColorInAllThemes">#FFFFFFFF</item>
+
+        <item name="greenAppColor">#FF4985</item>
+        <item name="greenGradientStartColor">#ff3a72</item>
+        <item name="greenGradientEndColor">#ff4985</item>
+        <item name="greyTextColorSplash">#959595</item>
+
+        <item name="greenAppColorLightAppIntro">#4AFF4985</item>
+        <item name="greyTextColorAppIntro">#6A6A6A</item>
+        <item name="languageHolderThemeColors">#FFFFFFFF</item>
+        <item name="unselectedLangOffRadioIconColor">#8B8B8B</item>
+
+        <item name="selectedLanguageBgLightThemeColor">#26FF4985</item>
+        <item name="homeCameraPermissionDialogGreyColor">#333333</item>
+        <item name="homeCameraPermissionDialogNoColor">#6A6A6A</item>
+        <item name="homeCameraPermissionDialogNoStrokeColor">#CFCFCF</item>
+        <item name="orangeStartColor">#E9B32D</item>
+        <item name="greenEndColor">#01990F</item>
+        <item name="lightGreyColor">#B1AFAF</item>
+        <item name="lightWhiteMainBackground">#F6F6F6</item>
+        <item name="likeUsGreyBgColor">#66BFBBBB</item>
+        <!--    <item name="nonScanableAreaColor">#A8000000</item>-->
+        <!--    <item name="nonScanableAreaColor">#A89F9F9F</item>-->
+        <item name="nonScanableAreaColor">#99000000</item>
+        <item name="keepFocusLightBlack">#66000000</item>
+        <item name="noteUnselectedOkColor">#666A6A6A</item>
+        <item name="greyDividerColor">#D1CBCB</item>
+        <item name="notes_dialog_bg">#4DC9C9CA</item>
+        <item name="datePickerColor">#009688</item>
+        <item name="datePickerButtonsColor">#F0AF51</item>
+        <item name="dimColor">#80000000</item>
+        <item name="blueThemeColor">#0077F0</item>
+        <item name="purpleThemeColor">#7547DD</item>
+        <item name="yellowThemeColor">#FFBC17</item>
+        <item name="pinkThemeColor">#FF4985</item>
+
+        <item name="websiteUrlColor">#3F51B5</item>
+
+        <item name="android:statusBarColor">@color/pinkThemeColor</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="adLayoutAdSymbol" parent="Theme.QrScanner2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/ads_icon</item>
+        <item name="android:text">Ad</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:minWidth">@dimen/_15sdp</item>
+        <item name="android:minHeight">@dimen/_15sdp</item>
+        <item name="android:color">@color/whiteColorInAllThemes</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+<!--    <style name="SplashDelay" parent="Theme.QRScanner">-->
+<!--        <item name="colorPrimary">@color/mainBackGroundColorGreen</item>-->
+<!--        <item name="colorPrimaryDark">@color/mainBackGroundColorGreen</item>-->
+<!--        <item name="colorAccent">@color/white</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowIsFloating">false</item>-->
+<!--        <item name="android:windowDisablePreview">true</item>-->
+<!--        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>-->
+<!--        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges-->
+<!--        </item>-->
+<!--        <item name="android:windowTranslucentStatus">false</item>-->
+<!--        <item name="android:statusBarColor">@color/mainBackGroundColorGreen</item>-->
+<!--        <item name="android:windowIsTranslucent">false</item>-->
+<!--    </style>-->
+
+
+
+
+
+</resources>

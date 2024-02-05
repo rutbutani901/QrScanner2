@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.fragments.CreateFragment"
+
+    android:background="@drawable/only_gradient_green"
+    >
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/touchLayout"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+
+
+
+    android:elevation="@dimen/_5sdp"
+    android:visibility="gone"
+
+    app:layout_constraintTop_toBottomOf="@id/filterLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/dimBackground"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:elevation="@dimen/_3sdp"
+    android:visibility="gone"
+
+    android:background="@color/dimColor"
+
+
+    app:layout_constraintTop_toBottomOf="@id/toolBar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:elevation="@dimen/_10sdp"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_10sdp"
+
+        android:background="@drawable/shape_botom_curves_12sdp"
+        android:backgroundTint="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/product"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+               android:background="@drawable/selector_histroy_filter_items"
+
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/product"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/website"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/website"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:text="@string/text"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/phone"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/contact"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/contact"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:text="@string/newEmail"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/wifi"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/newWifi"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/message"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/message"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/event"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:text="@string/event"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/facebook"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/facebbok"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/instagram"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/instagram"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/twitter"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:text="@string/twitter"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/whatsapp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/whatsapp"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/viber"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+              android:background="@drawable/selector_histroy_filter_items"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/viber"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_4sdp"
+
+                android:text=""
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/reset"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+
+            android:paddingVertical="@dimen/_10sdp"
+            android:gravity="center"
+
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/gradient_green_rounded_corners_8sdp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_back"
+
+            android:visibility="gone"
+
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@id/title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_vertical"
+            android:text="@string/history"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fav"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_fav_history"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+android:visibility="visible"
+
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_delete"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/filter"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_filter"
+
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+
+        android:background="@drawable/shape_top_side_curves"
+        android:backgroundTint="@color/lightWhiteMainBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scanTab"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/scanTabText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/scan"
+                android:textColor="?attr/greenAppColor"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/scanTabSelector"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_3sdp"
+
+                android:layout_marginTop="@dimen/_3sdp"
+
+                android:background="?attr/greenAppColor"
+
+                app:layout_constraintTop_toBottomOf="@id/scanTabText"
+                app:layout_constraintStart_toStartOf="@id/scanTabText"
+                app:layout_constraintEnd_toEndOf="@id/scanTabText"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/createTab"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/createTabText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/create"
+                android:textColor="@color/greyTextColorSplash"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/createTabSelector"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_3sdp"
+
+                android:layout_marginTop="@dimen/_3sdp"
+
+                android:visibility="gone"
+                android:background="?attr/greenAppColor"
+
+                app:layout_constraintTop_toBottomOf="@id/createTabText"
+                app:layout_constraintStart_toStartOf="@id/createTabText"
+                app:layout_constraintEnd_toEndOf="@id/createTabText"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@color/lightWhiteMainBackground"
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            android:background="@color/lightWhiteMainBackground"
+            android:visibility="gone"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/checkInternetLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:visibility="visible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/noInternetLogo"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+
+                android:src="@drawable/ic_camera_big"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/connectToInternet"
+                android:textAlignment="center"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/noInternetLogo" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/you_re_offline_check_your_connection"
+                android:textAlignment="center"
+
+                android:textColor="@color/greyTextColorAppIntro"
+                android:textSize="@dimen/_12ssp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tapToRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+
+                android:background="@drawable/gradient_green"
+
+
+                android:fontFamily="@font/roboto_medium"
+                android:paddingHorizontal="@dimen/_25sdp"
+
+
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@string/tapToRetry"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/networkSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+
+
+                android:fontFamily="@font/roboto_medium"
+                android:paddingHorizontal="@dimen/_25sdp"
+
+
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/network_setting"
+                android:textAlignment="center"
+                android:textColor="?attr/greenAppColor"
+                android:textSize="@dimen/_14ssp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tapToRetry"
+
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

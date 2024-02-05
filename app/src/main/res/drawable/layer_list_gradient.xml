@@ -1,0 +1,24 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="?attr/orangeStartColor"
+
+                android:endColor="?attr/greenGradientEndColor"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/white"
+                android:endColor="@android:color/transparent"
+                android:angle="90"
+                />
+        </shape>
+    </item>
+
+</layer-list>
+
+

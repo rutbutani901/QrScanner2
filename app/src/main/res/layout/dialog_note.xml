@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/shape_rounded_corners"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cross"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+
+        android:padding="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/ic_cross"
+        android:tint="@color/lightGreyColor"
+
+        android:layout_gravity="end"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="@string/pleaseEnterNote"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:fontFamily="@font/roboto_medium"
+        android:textAlignment="center"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+
+        android:hint="@string/add_note"
+        android:textColorHint="@color/greyTextColorAppIntro"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+
+       android:padding="@dimen/_10sdp"
+
+
+        android:fontFamily="@font/roboto_regular"
+
+        android:background="@drawable/shape_rounded_corners"
+        android:backgroundTint="@color/notes_dialog_bg"
+
+        android:minHeight="@dimen/_100sdp"
+        android:gravity="top"
+
+
+        android:layout_marginHorizontal="@dimen/_15sdp"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/ok"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium"
+
+        android:paddingHorizontal="@dimen/_60sdp"
+        android:paddingVertical="@dimen/_8sdp"
+
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_gravity="center"
+
+        android:background="@drawable/gradient_green_rounded_corners_8sdp"
+
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>

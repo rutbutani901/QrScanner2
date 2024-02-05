@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <application
+        android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.Application"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/square"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/GreenTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="LockedOrientationActivity"
+        tools:replace="android:allowBackup"
+        tools:targetApi="33">
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.ScanningTipsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.SupportedCodesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.HelpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.SearchOptionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.AboutUsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.InAppPurchaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.ScanCodeShowInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateBarcodeInputActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateWhatsappCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateContactCode"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/x-vcard" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateEmailCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateWifiCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.SaveQrCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreatedCodeShowInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.ViewCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateMessageCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateEventCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateFbCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateTextCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreatePhoneCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.CreateWebsiteCode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.ExportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.FaqActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.FeedBackActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.OtherSitesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.ScanResult"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.LanguageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.AppIntroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id" />
+
+    </application>
+
+</manifest>

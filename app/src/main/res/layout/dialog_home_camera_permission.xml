@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+        android:layout_marginTop="@dimen/_40sdp"
+
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/_20sdp"
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/layer_list_gradient"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/description"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_40sdp"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/permission_allow"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textAlignment="center"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+
+                android:text="@string/please_allow_camera_permission_and_scan_the_code_for_more_info"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/homeCameraPermissionDialogGreyColor"
+                android:fontFamily="@font/roboto_regular"
+                android:textAlignment="center"
+
+                android:layout_marginTop="@dimen/_6sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginVertical="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="horizontal"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/no"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/shape_rounded_corners_stroke"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+
+                    android:text="@string/no"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/homeCameraPermissionDialogNoColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textAlignment="center"
+
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/allow"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+
+                    android:background="@drawable/gradient_green"
+
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+
+
+                    android:text="@string/allow"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textAlignment="center"
+
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+
+        android:src="@drawable/ic_camera_permission"
+
+
+        android:contentDescription="dialog_icon_description"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/hand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:elevation="@dimen/_5sdp"
+
+
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/cardView"
+
+        android:orientation="horizontal"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+           android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+
+
+
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/thumb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:lottie_rawRes="@raw/click"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+
+
+            app:layout_constraintTop_toBottomOf="parent"
+
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

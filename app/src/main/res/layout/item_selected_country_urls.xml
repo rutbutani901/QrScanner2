@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="@dimen/_8sdp"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/flag"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
+
+        android:scaleType="centerCrop"
+
+        android:background="@color/red"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+
+
+        android:fontFamily="@font/roboto_regular"
+        android:text="America"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flag"
+        app:layout_constraintTop_toTopOf="@id/flag"
+      />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+
+        android:layout_marginTop="@dimen/_8sdp"
+
+        android:fontFamily="@font/roboto_regular"
+        android:text="America"
+        android:textColor="@color/greyTextColorAppIntro"
+        android:textSize="@dimen/_11ssp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flag"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/browser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+
+        android:layout_marginTop="@dimen/_1sdp"
+
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/open_url_in_default_browser"
+        android:textColor="@color/greyTextColorAppIntro"
+        android:textSize="@dimen/_10ssp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flag"
+        app:layout_constraintTop_toBottomOf="@id/url"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/prducts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+
+
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/activation_mode_products"
+        android:textColor="@color/greyTextColorAppIntro"
+        android:textSize="@dimen/_10ssp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flag"
+        app:layout_constraintTop_toBottomOf="@id/browser"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

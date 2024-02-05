@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteColorInAllThemes">#FFFFFFFF</color>
+
+
+    <color name="greenAppColor">#33CB8B</color>
+
+    <color name="greenGradientStartColor">#01b296</color>
+    <color name="greenGradientEndColor">#0cca84</color>
+
+    <color name="blueGradientStartColor">#0983ff</color>
+    <color name="blueGradientEndColor">#3498ff</color>
+
+    <color name="brownGradientStartColor">#ffe2ba</color>
+    <color name="brownGradientMedColor">#ffaf66</color>
+    <color name="brownGradientEndColor">#fed060</color>#00ccff
+
+    <color name="lightBlueGradientStartColor">#00ccff</color>
+    <color name="lightBlueGradientMedColor">#aeeeff</color>
+    <color name="lightBlueGradientEndColor">#00ccff</color>
+
+
+    <color name="purpleGradientStartColor">#7a4ce4</color>
+    <color name="purpleGradientEndColor">#8150f3</color>
+
+    <color name="yellowGradientStartColor">#FEB502</color>
+    <color name="yellowGradientEndColor">#feb802</color>
+
+    <color name="pinkGradientStartColor">#ff3a72</color>
+    <color name="pinkGradientEndColor">#ff4985</color>
+
+    <color name="greyTextColorSplash">#959595</color>
+
+    <color name="greenAppColorLightAppIntro">#4A03B393</color>
+    <color name="greyTextColorAppIntro">#6A6A6A</color>
+
+    <color name="languageHolderThemeColors">#FFFFFFFF</color>
+    <color name="unselectedLangOffRadioIconColor">#8B8B8B</color>
+    <color name="selectedLanguageBgLightThemeColor">#2603B393</color>
+
+
+    <color name="homeCameraPermissionDialogGreyColor">#333333</color>
+    <color name="homeCameraPermissionDialogNoColor">#6A6A6A</color>
+    <color name="homeCameraPermissionDialogNoStrokeColor">#CFCFCF</color>
+    <color name="orangeStartColor">#E9B32D</color>
+    <color name="greenEndColor">#01990F</color>
+
+
+    <color name="lightGreyColor">#B1AFAF</color>
+
+    <color name="lightWhiteMainBackground">#F6F6F6</color>
+
+    <color name="likeUsGreyBgColor">#66BFBBBB</color>
+
+<!--    <color name="nonScanableAreaColor">#A8000000</color>-->
+<!--    <color name="nonScanableAreaColor">#A89F9F9F</color>-->
+    <color name="nonScanableAreaColor">#99000000</color>
+    <color name="keepFocusLightBlack">#66000000</color>
+
+    <color name="noteUnselectedOkColor">#666A6A6A</color>
+
+    <color name="greyDividerColor">#D1CBCB</color>
+    <color name="notes_dialog_bg">#4DC9C9CA</color>
+
+    <color name="datePickerColor">#009688</color>
+    <color name="datePickerButtonsColor">#F0AF51</color>
+    <color name="dimColor">#80000000</color>
+
+    <color name="blueThemeColor">#0077F0</color>
+    <color name="purpleThemeColor">#7547DD</color>
+    <color name="yellowThemeColor">#FFBC17</color>
+    <color name="pinkThemeColor">#FF4985</color>
+
+    <color name="red">#F31404</color>
+    <color name="veryLightGrey">#4DD7D7DC</color>
+
+    <color name="adDescriptionColor">#808383</color>
+    <color name="adShimmerColor">#6B6C6C</color>
+    <color name="veryLightShimmerColor">#AFB1B1</color>
+    <color name="pro_resotre_bg">#4D000000</color>
+    <color name="pro_yellow">#FFC700</color>
+    <color name="pro_continue_color">#703607</color>
+    <color name="pro_yellow_border">#F1C761</color>
+</resources>

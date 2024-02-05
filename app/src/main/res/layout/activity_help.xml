@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.activity.HelpActivity"
+
+    android:background="@drawable/only_gradient_green"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:background="@drawable/only_gradient_green"
+
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+
+            android:padding="@dimen/_3sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="@dimen/_2sdp"
+
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+
+            android:layout_weight="1"
+            android:ellipsize="end"
+
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:text="@string/help"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_8sdp"
+
+            android:textSize="@dimen/_16ssp"
+
+
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ScrollView
+        android:id="@+id/scroolview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:scrollbars="none"
+
+
+
+        android:background="@drawable/shape_top_side_curves"
+        android:backgroundTint="@color/lightWhiteMainBackground"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:paddingVertical="@dimen/_10sdp"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/supportedCodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+
+
+                android:clickable="true"
+                android:focusable="true"
+
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/white"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+               android:paddingVertical="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/supportedCodesLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/shape_rounded_corners"
+                    android:backgroundTint="?attr/greenAppColor"
+
+                    android:src="@drawable/ic_theme_tick_icon"
+
+
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/supportedCodesText"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/supportedCodesText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/supportedCodes"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/supportedCodesLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:clickable="true"
+                android:focusable="true"
+
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/white"
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tipsLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/shape_rounded_corners"
+                    android:backgroundTint="?attr/greenAppColor"
+
+                    android:src="@drawable/scan_image_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tipsText"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tipsText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/tips_for_scanning"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tipsLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/feedBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/white"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+
+                android:clickable="true"
+                android:focusable="true"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/feedBackLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+
+                    android:background="@drawable/shape_rounded_corners"
+                    android:backgroundTint="?attr/greenAppColor"
+
+                    android:src="@drawable/email_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/feedback"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/feedBackLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

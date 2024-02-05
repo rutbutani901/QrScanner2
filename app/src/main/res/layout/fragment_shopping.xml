@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.fragments.CreateFragment"
+
+    android:background="@drawable/only_gradient_green"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_vertical"
+            android:text="@string/shopping"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pro"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+
+            android:layout_gravity="end"
+            android:src="@drawable/ic_pro"
+
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_top_side_curves"
+        android:backgroundTint="@color/lightWhiteMainBackground"
+
+        android:scrollbars="none"
+
+        android:visibility="visible"
+
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/contentInScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:visibility="visible"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/categories"
+               android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/roboto_medium"
+
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:nestedScrollingEnabled="false"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+
+                android:id="@+id/ad_Linear_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:visibility="visible"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                >
+
+                <include
+                    android:id="@+id/shimmerLayout"
+                    layout="@layout/shimmer_small_native_two"
+                    android:visibility="visible"
+                    />
+
+
+                <FrameLayout
+                    android:id="@+id/adContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="gone"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/recommend"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/roboto_medium"
+
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:nestedScrollingEnabled="false"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/onlineStores"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/roboto_medium"
+
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/onlineStoreRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:nestedScrollingEnabled="false"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+android:id="@+id/checkInternetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/noInternetLogo"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+
+            android:src="@drawable/ic_camera_big"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/connectToInternet"
+            android:textAlignment="center"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noInternetLogo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/you_re_offline_check_your_connection"
+            android:textAlignment="center"
+
+            android:textColor="@color/greyTextColorAppIntro"
+            android:textSize="@dimen/_12ssp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tapToRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:background="@drawable/gradient_green"
+
+
+            android:fontFamily="@font/roboto_medium"
+            android:paddingHorizontal="@dimen/_25sdp"
+
+
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/tapToRetry"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/networkSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+
+
+            android:fontFamily="@font/roboto_medium"
+            android:paddingHorizontal="@dimen/_25sdp"
+
+
+            android:paddingVertical="@dimen/_4sdp"
+            android:text="@string/network_setting"
+            android:textAlignment="center"
+            android:textColor="?attr/greenAppColor"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tapToRetry"
+
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

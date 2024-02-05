@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainBarcodeDataLayout"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+
+    android:background="@drawable/shape_rounded_corners"
+    android:backgroundTint="@color/white"
+
+    android:clickable="true"
+    android:focusable="true"
+
+
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_6sdp"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barcodeIcon"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+
+        android:src="@drawable/ic_website"
+
+        app:layout_constraintBottom_toBottomOf="@id/createdDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barcodeValue"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/barcodeValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingEnd="@dimen/_8sdp"
+
+        android:singleLine="true"
+
+
+        android:text="192651029872"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+
+        app:layout_constraintBottom_toTopOf="@id/barcodeNote"
+        app:layout_constraintEnd_toStartOf="@id/barrier2"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/barcodeNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+
+        android:ellipsize="end"
+
+        android:fontFamily="@font/roboto_regular"
+        android:paddingEnd="@dimen/_8sdp"
+
+        android:singleLine="true"
+        android:text="hii hello"
+        android:textColor="?attr/greenAppColor"
+        android:textSize="@dimen/_10ssp"
+
+        app:layout_constraintBottom_toTopOf="@id/createdDate"
+        app:layout_constraintEnd_toStartOf="@id/barrier2"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintTop_toBottomOf="@id/barcodeValue" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/createdDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+
+        android:paddingEnd="@dimen/_8sdp"
+        android:singleLine="true"
+
+        android:text="192651029872"
+        android:textColor="@color/greyTextColorSplash"
+        android:textSize="@dimen/_10ssp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/barrier2"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintTop_toBottomOf="@id/barcodeNote" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favIcon"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:padding="@dimen/_3sdp"
+
+        android:src="@drawable/ic_fav"
+        android:visibility="gone"
+        android:tint="?attr/greenAppColor"
+        app:layout_constraintBottom_toBottomOf="@id/createdDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barcodeValue"
+
+
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/delete"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_delete_grey"
+
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/createdDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barcodeValue"
+
+
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="favIcon,delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

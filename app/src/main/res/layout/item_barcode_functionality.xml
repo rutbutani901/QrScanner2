@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@drawable/shape_rounded_corners"
+    android:backgroundTint="@color/white"
+
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_10sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+
+        android:src="@drawable/ic_info"
+        android:background="@drawable/gradient_green_rounded_corners_8sdp"
+        android:padding="@dimen/_5sdp"
+
+        android:layout_gravity="center_vertical"
+
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/siteText"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:text="Google"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/roboto_regular"
+
+        android:layout_gravity="center_vertical"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_right_arrow"
+        android:layout_gravity="center_vertical"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

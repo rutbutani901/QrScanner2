@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="scanner.qrcodescanner.qrcodereader.barcodescanner.barcodereader.fragments.QRCodeInsideCreateFragment"
+
+    android:background="@color/lightWhiteMainBackground"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="@dimen/_35sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/startLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/shape_rounded_corners"
+            android:backgroundTint="@color/white"
+
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/qrcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:paddingVertical="@dimen/_6sdp"
+
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline6"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/newQrCode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/dataMatrix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                android:paddingVertical="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline6"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/dataMatrix"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/pdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_6sdp"
+
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                app:layout_constraintTop_toBottomOf="@id/qrcode"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline6"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/pdf"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/aztec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/dataMatrix"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline6"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/aztec"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/firstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/shape_rounded_corners"
+            android:backgroundTint="@color/white"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/startLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ean13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:paddingVertical="@dimen/_6sdp"
+
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/ean13"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ean8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                android:paddingVertical="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/ean8"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/upce"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_6sdp"
+
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                app:layout_constraintTop_toBottomOf="@id/ean13"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/upce"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/upca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/ean8"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/upca"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/secondLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:background="@drawable/shape_rounded_corners"
+            android:backgroundTint="@color/white"
+
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/firstLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/code128"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:paddingVertical="@dimen/_6sdp"
+
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline4"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/code128"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/code93"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                android:paddingVertical="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline4"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/code93"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/code39"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_6sdp"
+
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                app:layout_constraintTop_toBottomOf="@id/code128"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline4"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/code39"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/codabar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/code93"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline4"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/codabar"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/thirdLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/shape_rounded_corners"
+            android:backgroundTint="@color/white"
+
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@id/secondLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/itf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:paddingVertical="@dimen/_6sdp"
+
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/shape_rounded_corners"
+                android:backgroundTint="@color/lightWhiteMainBackground"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline5"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_barcode"
+
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_3sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/itf"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
